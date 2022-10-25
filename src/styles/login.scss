@@ -1,0 +1,16 @@
+$twitter: #33a1f2;
+
+#landing {
+    height: 100vh;
+    background-color: $twitter !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#login-form {
+    padding: 5rem;
+    background-color: #fdfdfd;
+    border: none;
+    border-radius: 1rem;
+}

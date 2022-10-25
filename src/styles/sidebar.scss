@@ -1,0 +1,79 @@
+$primary: #000;
+$gray: #7a7a7a;
+$outline: #2f3336;
+$twitter: #33a1f2;
+$twitter-dark-hover: #011017;
+$search: #202327;
+
+.sidebar-container {
+    display: none;
+    @media (min-width: 1000px) {
+      display: flex;
+      flex-direction: column;
+    //   width: min(399px, 100%);
+      min-width: 399px;
+      max-width: 100%;
+    }
+}
+
+.search-wrapper {
+    padding: 10px 24px;
+    // width: min(399px, 100%);
+    min-width: 399px;
+    max-width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 2;
+    background: $primary;
+  
+    max-height: 57px;
+}
+
+.search-input {
+    width: 100%;
+    height: 39px;
+    font-size: 14px;
+    padding: 0 10px 0 52px;
+    border-radius: 19.5px;
+    background: $search;
+  
+    &::placeholder {
+      color: $gray;
+    }
+  
+    ~ svg {
+      position: relative;
+      top: -33px;
+      left: 15px;
+      z-index: 1;
+  
+      transition: 180ms ease-in-out;
+    }
+  
+    outline: 0;
+  
+    &:focus {
+      border: 1px solid $twitter;
+  
+      ~ svg {
+        fill: $twitter;
+      }
+    }
+}
+
+.search-icon {
+    width: 27px;
+    height: 27px;
+    fill: $gray;
+}
+
+.sidebar-body {
+    display: flex;
+    flex-direction: column;
+    padding: 57px 24px 200px;
+    margin-top: 3px;
+  
+    > div + div {
+      margin-top: 15px;
+    }
+}

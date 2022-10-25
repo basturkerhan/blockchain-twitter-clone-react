@@ -1,0 +1,27 @@
+$twitter: #3f72af;
+$twitter-dark-hover: #011017;
+
+.tab {
+  margin-top: 10px;
+  padding: 11px 0 15px;
+  text-align: center;
+
+  font-weight: bold;
+  font-size: 15px;
+
+  outline: 0px;
+  cursor: pointer;
+
+  color: $twitter;
+  border-bottom: 2px solid $twitter;
+
+  &:hover {
+    background: $twitter-dark-hover;
+  }
+}
+
+.tweets {
+  display: flex;
+  flex-direction: column-reverse;
+  flex-shrink: 0;
+}

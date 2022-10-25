@@ -1,0 +1,185 @@
+$primary: #000;
+$gray: #7a7a7a;
+$outline: #2f3336;
+$retweet: #00c06b;
+$like: #e8265e;
+$twitter: #33a1f2;
+$twitter-dark-hover: #011017;
+
+.tweet-container {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 16px;
+  border-bottom: 1px solid $outline;
+  max-width: 100%;
+  cursor: pointer;
+  &:hover {
+    background: $twitter-dark-hover;
+  }
+}
+
+.tweet-body {
+  display: flex;
+  margin-top: 3px;
+  position: relative;
+}
+
+.tweet-avatar {
+  img {
+    width: 49px;
+    height: 49px;
+    border-radius: 50%;
+    flex-shrink: 0;
+    background: $gray;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+.tweet-content {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin-top: 2px;
+  padding-left: 59px;
+}
+
+.tweet-header {
+  display: flex;
+  align-items: center;
+  font-size: 15px;
+  white-space: nowrap;
+
+  > strong {
+    margin-right: 5px;
+  }
+
+  > span,
+  time {
+    color: $gray;
+  }
+
+  > strong,
+  span {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+  }
+}
+
+.dot {
+  background: $gray;
+  width: 2px;
+  height: 2px;
+  margin: 0 10px;
+}
+
+.tweet-description {
+  font-size: 14px;
+  margin-top: 4px;
+}
+
+.image-content {
+  img {
+    margin-top: 12px;
+    width: 100%;
+    min-height: 285px;
+    max-height: 175px;
+    background: $outline;
+    border-radius: 14px;
+  }
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 11px auto 0;
+  width: 100%;
+
+  @media (min-width: 330px) {
+    width: 63%;
+  }
+
+  > div {
+    cursor: pointer;
+
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+
+.status {
+  display: flex;
+  align-items: center;
+
+  font-size: 14px;
+
+  > svg {
+    margin-right: 5px;
+  }
+
+  &:nth-child(1) {
+    &,
+    > svg path {
+      color: $gray;
+    }
+  }
+
+  &:nth-child(2) {
+    color: $retweet;
+
+    > svg path {
+      fill: $retweet;
+    }
+  }
+
+  &:nth-child(3) {
+    color: $like;
+
+    > svg {
+      fill: $like;
+    }
+  }
+}
+
+.icon {
+  width: 19px;
+  height: 19px;
+}
+
+.back-header {
+  z-index: 2;
+  position: sticky;
+  top: 0;
+  background: $primary;
+
+  display: flex;
+  align-items: center;
+
+  text-align: left;
+
+  padding: 8px 0 9px 13px;
+  border-bottom: 1px solid $outline;
+
+  > button {
+    padding: 8px;
+    border-radius: 50%;
+
+    outline: 0;
+    cursor: pointer;
+
+    &:hover {
+      background: $twitter-dark-hover;
+    }
+  }
+}
+
+.back-icon {
+  width: 24px;
+  height: 24px;
+  fill: $twitter;
+}

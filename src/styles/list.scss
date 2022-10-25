@@ -1,0 +1,30 @@
+$secondary: #15181c;
+$outline: #2f3336;
+
+.list-container {
+  display: flex;
+  flex-direction: column;
+  background: $secondary;
+  border-radius: 14px;
+}
+
+.list-item {
+  padding: 10px 16px;
+
+  & + div {
+    border-top: 1px solid $outline;
+  }
+
+  &:first-child {
+    padding-top: 13px;
+  }
+
+  &:last-child {
+    padding-bottom: 17px;
+  }
+}
+
+.title {
+  font-weight: bold;
+  font-size: 19px;
+}

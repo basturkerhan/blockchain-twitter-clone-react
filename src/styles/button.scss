@@ -1,0 +1,19 @@
+$twitter: #3f72af;
+$white: #d9d9d9;
+$twitter-dark-hover: #011017;
+
+.button {
+  background: $twitter;
+  color: $white;
+  border: $twitter;
+  padding: 16px;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+  outline: 0;
+
+  &:hover {
+    background: $twitter-dark-hover;
+  }
+}
